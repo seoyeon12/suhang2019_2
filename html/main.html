@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Main</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../anime-master/lib/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+    <!-- <div class="battery-log">0</div> -->
+    
+    <div class="header">
+        <img src="../img/logo.png" alt="로고" id="logo" onclick="location.href = 'open.html'">
+
+        <ul class="minibar">
+            <li>로그인</li><span class="solid">|</span>
+            <li>회원가입</li><span class="solid">|</span>
+            <li>고객센터</li><span class="solid">|</span>
+            <li>이용안내</li><span class="solid">
+        </ul>
+    </div>
+
+    <div class="nav">
+        <ul class="navbar">
+            <li class="one" onclick="location.href = 'open.html'">홈</li>
+            <li class="one o">영화예매</li>
+            <li class="one">소개</li>
+            <li class="one" onclick="location.href = 'https://search.naver.com/search.naver?where=news&sm=tab_jum&query=%EB%A7%90%EB%A0%88%ED%94%BC%EC%84%BC%ED%8A%B82'">뉴스</li>
+            <li class="one" onclick="location.href = 'https://search.naver.com/search.naver?where=nexearch&sm=tab_jum&query=%EA%B2%A8%EC%9A%B8%EC%99%95%EA%B5%AD2'">개봉예정</li>
+        </ul>
+    </div>
+
+    <div class="body">
+        <div class="content">
+            <div class="ticketing">
+                <img src="../img/MainImg.jpg" alt="대표이미지" id="mainimg">
+                <div class="info">
+                    <div class="title">말레피센트 2</div>
+                    <div class="subtitle">(Maleficent2: Mistress of Evil, 2019)</div>
+                    <div class="subtitle">[시사회]</div>
+                    <div class="movecontent"> 
+
+                        <div class="Moveinfo">
+                            <div class="label">개봉일</div><br>
+                            <div class="label">관람등급</div><br>
+                            <div class="label">누적관객</div><br>
+                        </div>
+
+                        <div class="Moveinfo">
+                            <div id="Opendate" class="label">2019.10.17.</div><br>
+                            <div id="grade" class="label">[국내] 12세 관람가</div><br>
+                            <div id="customer" class="label">1,374,833명</div><br>
+                        </div>
+
+                        <div class="Moveinfo">
+                            <div class="label">장르</div><br>
+                            <div class="label">상영시간</div><br>
+                            <div class="label">평점</div><br>
+                        </div>
+
+                        <div class="Moveinfo">
+                            <div id="genre" class="label">판타지</div><br>
+                            <div id="movietime" class="label">119분</div><br>
+                            <div id="star" class="label">8.61</div><br>
+                        </div>
+                        <!-- <span class="label">개봉일</span>
+                        <span class="ans">2019.10.17.</span>
+                        <span class="label">장르</span>
+                        <span class="ans">판타지</span>
+                        <br>
+                        <span class="label">관람등급</span>
+                        <span class="ans">[국내] 12세 관람가</span>
+                        <span class="label">상영시간</span>
+                        <span class="ans">119분</span>
+                        <br>
+                        <span class="label">누적관객</span>
+                        <span class="ans">1,374,833명</span>
+                        <span class="label">평점</span>
+                        <span class="ans">8.61</span> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="selectDay">
+                <div class="selectTitle">
+                    <div class="choicetitle">날짜선택</div>
+                    <div class="choicetitle">시간선택</div>
+                </div>
+                <div class="section">
+                    <div class="choicesection" id="date">
+                        <div onclick="choiceDate('2019년 10월 16일 수')" class="btnTime">2019년 10월 16일 수 </div> 
+                        <div onclick="choiceDate('2019년 10월 17일 목')" class="btnTime">2019년 10월 17일 목 </div> 
+                    </div>
+                    <div class="choicesection" id="time">
+                        <div onclick="choiceTime('13시 00분')" class="btnTime">13시 00분</div>
+                        <div onclick="choiceTime('15시 00분')" class="btnTime">15시 00분</div> 
+                        <div onclick="choiceTime('18시 00분')" class="btnTime">18시 00분</div>
+                    </div>
+                    <div class="choicesection" id="nowseat">
+                        <div id="selectDate" style="margin: 10px 0px;"></div>
+                        <div id="selectTime" style="margin: 15px 0px;"></div>
+                    </div>
+                </div>
+                <div class="gotobuy">
+                    <div id="buying">예매하기</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup">
+            <a href="http://www.cgv.co.kr/culture-event/event/detail-view.aspx?idx=20333&menu=0">
+                <img src="http://adimg.cgv.co.kr/images/201911/Frozen2/1106_980x90_1.jpg" 
+                    alt="광고배너">
+            </a>
+        </div>
+
+        <div class="content2">
+            <ul class="tabs">
+                <li class="tab-link yes" data-tab="tab-1">상세정보</li>
+                <li class="tab-link" data-tab="tab-2"> 배우/제작진 </li>
+                <li class="tab-link" data-tab="tab-3">예매안내</li>
+            </ul>
+
+            <div id="tab-1" class="tab-content yes">
+                <div class="tiser">
+                    <video id="video1" width="800" controls>
+                        <source src="../video/[말레피센트 2] 메인 예고편.mp4" type="video/mp4">
+                    </video>
+                    <br><br>
+                    <a href="https://www.youtube.com/watch?v=sXjwpMDrMnY">자세히 보러가기</a>
+                    <br><br>
+                    <div onclick="playPause()" id="play">Play</div> 
+                    <br><br>
+                </div>
+                <img src="../img/ticketingbanner.png" alt="안내배너">
+            </div>
+                      
+            <div id="tab-2" class="tab-content">
+                <div id = "director">
+                    
+                </div>
+                <ul id = "peopleList">
+
+                </ul>
+            </div>
+
+            <div id="tab-3" class="tab-content">
+                <div id="brands">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="pay">
+            <img id="pay" src="../img/pay.png" alt="pay">
+        </div>
+
+        <div class="footinfo">
+            <ul class="footlist">
+                <li class="item">이용약관</li>
+                <li class="item">전자금용거래약관</li>
+                <li class="item">편성기준</li>
+                <li class="item">재휴문의</li>
+                <li class="item">광고/프로모션문의</li>
+                <li class="item">개인정보처리방침</li>
+            </ul>
+        </div>
+
+        <address>
+            (43010) 대구광역시 달성군 구지면 창리로11길 93 (창리 324) 대구소프트웨어고등학교
+        </address>
+
+        <p id="information">
+            <br>
+            <span> 제작자 : 이서연</span>
+            <span> 개인정보보호 책임자 : OOO 대표</span>
+            <br>
+            <span> 팩스번호 : 053)614-0709</span>
+            <span> 교무실 : 053)231-9226</span>
+        </p>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

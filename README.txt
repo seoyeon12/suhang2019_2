@@ -5,3 +5,4 @@ https://seoyeon12.github.io/suhang2019_2/html/main.html
 
 웹 프론트만 제작하였습니다.
 2019년도 하반기 제작하였습니다.
+영화 예매 페이지 퍼블리싱하였습니다.
